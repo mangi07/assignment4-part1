@@ -8,11 +8,14 @@
     <?php
 	
 	//get form variables
-	  $min_r = $_GET["min-multiplicand"];
-	  $max_r = $_GET["max-multiplicand"];
-	  $min_l = $_GET["min-multiplier"];
-	  $max_l = $_GET["max-multiplier"];
-	
+	  $min_r = /*(int)*/$_GET["min-multiplicand"];
+	  $max_r = /*(int)*/$_GET["max-multiplicand"];
+	  $min_l = /*(int)*/$_GET["min-multiplier"];
+	  $max_l = /*(int)*/$_GET["max-multiplier"];
+	  
+      //casting issues: How to cast to int and have failure/null instead of 0...
+	  var_dump($max_l);
+	  
 	if (checkNull() && checkInt() && checkRange())
 	  makeMultTable();
 	
@@ -41,25 +44,41 @@
 	}
 	
 	//check variables are all integers
+	//  converts valid string integers to integers
+	//  returns: true if all checked strings are string integers (and they will all be converted to integers), else returns false
 	function checkInt () {
 	  global $min_r, $max_r, $min_l, $max_l;
 	  $allInts = true;
-	  if (!is_int($min_r)) {
+	  //$regEx = /optional-?followed by[0-9]{1,}/;
+	  $regEx = "/^[-+]?\d+$/";
+	  //use preg_match($regEx, $min_r);??
+	  
+	  //$validatedValue = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+	  //from http://stackoverflow.com/questions/4100022/php-validate-integer
+	  
+	  
+	  //****checkout return values on http://php.net/manual/en/function.filter-input.php
+	  // and possibly rewrite entire error checking into one function with parameters passed in
+	  
+	  //replace is_numeric with regEx testing
+	  if (is_numeric($min_r)) {
+	    //if (preg_match($regEx, $min_r)) {}
 	    echo "[min-multiplican] must be an integer.<br>";
 		$allInts = false;
 	  }
-	  if (!is_int($max_r)) {
+	  if (!is_numeric($max_r)) {
 	    echo "[max-multiplican] must be an integer.<br>";
 	    $allInts = false;
 	  }
-	  if (!is_int($min_l)) {
+	  if (!is_numeric($min_l)) {
 	    echo "[max-multiplier] must be an integer.<br>";
 	    $allInts = false;
 	  }
-	  if (!is_int($max_l)) {
+	  if (!is_numeric($max_l)) {
 	    echo "[min-multiplier] must be an integer.<br>";
 		$allInts = false;
 	  }
+	  
       return $allInts;
 	}
 		
@@ -79,6 +98,7 @@
 	
 	function makeMultTable() {
 		//for...
+		echo "<script>alert('All checks passed!');</script>";
 	}
 	
 	
