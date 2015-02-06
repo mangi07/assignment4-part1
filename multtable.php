@@ -3,13 +3,15 @@
 <!DOCTYPE html>
 
 <html>
-  <head></head>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="description" content="CS 290 Assignment 5">
+	<meta name="author" content="Benjamin R. Olson">
+	<title>CS 290 Assignment 2: multtable.php</title>
+  </head>
   <body>
+    <h1>multtable.php</h1>
     <?php
-	
-	//debug
-	//$regEx = "/^[-+]?[1-9]{1}\d{0,}$/";
-	//echo preg_match($regEx, "-90");
 	
 	//get form variables
 	  $min_r = $_GET["min-multiplicand"];
@@ -54,12 +56,6 @@
 	  $allInts = true;
 	  //string that represents an integer:
 	  $regEx = "/^[-+]?[1-9]{1}\d{0,}$/";
-	  //use preg_match($regEx, $min_r);
-	  
-	  /*Could also use
-	  $validatedValue = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-	  from http://stackoverflow.com/questions/4100022/php-validate-integer
-	  */
 	  
 	  //replace is_numeric with regEx testing
 	  if (preg_match($regEx, $min_r) || $min_r == "0") {
@@ -105,23 +101,25 @@
 	}
 	
 	function makeMultTable() {
+		global $min_r, $max_r, $min_l, $max_l;
+	
 		echo "<script>alert('All checks passed!');</script>";
-		$r_length = $max_r - $min_r + 2; //multiplicans
-		$l_length = $max_l - $min_l + 2; //multipliers
+		$r_length = $max_r - $min_r + 1; //multiplicans
+		$l_length = $max_l - $min_l + 1; //multipliers
 		//setup table
 		echo "<table>";
 		echo "<caption>Multiplication Table</caption>";
-		echo "<thead><tr>";
+		echo "<thead><tr><th>";
 		//create top row
-		for ($i = 0; $i <= $l_length; $i++) {
+		for ($i = 0; $i < $l_length; $i++) {
 		  echo "<th>" . ($i + $min_l);
 		}
 		echo "</thead>";
 		echo "<tbody>";
 		//create left column and rows
-		for ($j = 0; $j <= $r_length; $j++) {
+		for ($j = 0; $j < $r_length; $j++) {
 			echo "<tr><th scope=row>" . ($min_r + $j);
-			for ($k = 0; $k <= $l_length; $k++) {
+			for ($k = 0; $k < $l_length; $k++) {
 			  echo "<td>" . (($k + $min_l) * ($j + $min_r));
 			}
 		}
