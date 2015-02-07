@@ -55,34 +55,8 @@
 		default:
 			echo "Error: Unknown.";
 	}
-	//var_dump($_GET);
 	
 	echo $json_string;
-	
-	
-	//make a JSON object: the following may not be necessary...
-/*
-	foreach($_GET as $key=>$val) 
-  { 
-   if($key != $parameter) 
-   { 
-    if(!$firstRun) 
-    { 
-     $output .= "&"; 
-    } 
-    else 
-    { 
-     $firstRun = false; 
-    } 
-    $output .= $key."=".urlencode($val); 
-   } 
-  }
-
-	//this page should return the JSON object just created
-$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
-
-echo json_encode($arr);
-*/
 	
 	
 	?>
