@@ -15,10 +15,10 @@
 	<?php
 	
 	//get form variables
-	  $min_r = $_GET["min-multiplicand"];
-	  $max_r = $_GET["max-multiplicand"];
-	  $min_l = $_GET["min-multiplier"];
-	  $max_l = $_GET["max-multiplier"];
+	$min_r = $_GET["min-multiplicand"];
+	$max_r = $_GET["max-multiplicand"];
+	$min_l = $_GET["min-multiplier"];
+	$max_l = $_GET["max-multiplier"];
  
 	if (checkNull() && checkInt() && checkRange())
 	  makeMultTable();

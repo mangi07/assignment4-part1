@@ -18,9 +18,6 @@
     
 	<?php
 	/* Code borrowed and modified from php-sessions.mp4 */
-
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
 	
 	if(isset($_GET['action']) && $_GET['action'] == 'end'){
 		$_SESSION = array();
