@@ -11,7 +11,8 @@
   </head>
   <body>
     <h1>multtable.php</h1>
-    <?php
+    
+	<?php
 	
 	//get form variables
 	  $min_r = $_GET["min-multiplicand"];
@@ -126,7 +127,7 @@
 		echo "</table";
 	}
 	
-	
 	?>
+	
   </body>
 </html>

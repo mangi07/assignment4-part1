@@ -29,15 +29,10 @@
 		$filePath = implode('/', $filePath);
 		$redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath
 			. "/login.php";
-		
-		//try this
 		echo "<script type='text/javascript'>
 			window.location = '$redirect';
 			</script>";
-		
-		//header("Location: {$redirect}/login.php", true);
-		//die();
-		exit();
+		die();
 	}
 
 	if(session_status() == PHP_SESSION_ACTIVE) {
@@ -58,15 +53,10 @@
 		$filePath = implode('/', $filePath);
 		$redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath 
 			. "/login.php";
-		
-		//try this
 		echo "<script type='text/javascript'>
 			window.location = '$redirect';
 			</script>";
-		
-		//header("Location: {$redirect}/login.php", true);
-		//die();
-		exit();
+		die();
 	  }
 	  //if session username is set, continue loading page content
 	  if (isset($_SESSION['username'])) {	  
