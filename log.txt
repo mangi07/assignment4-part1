@@ -1,0 +1,39 @@
+Start: Thurs, 5 Feb 2015, 23:15:00 -0800
+End: Fri, 6 Feb 2015, 24:45 -0800
+Tasks: Start assignment, almost completed error checking code on multtable.php
+
+Start: Fri, 6 Feb 2015, 01:00:00 -0800
+End: Fri, 6 Feb 2015, 02:00:00 -0800
+Tasks: modifying error checking for integer validation on multtable.php
+
+Start: Fri, 6 Feb 2015, 13:00:00 -0800
+End: Fri, 6 Feb 2015, 14:00:00 -0800
+Task: Finish error checking section of multtable.php
+
+Start: Fri, 6 Feb 2015, 14:30:00 -0800
+End: Fri, 6 Feb 2015, 15:30:00 -0800
+Tasks: Finished multtable.php
+
+Start: Fri, 6 Feb 2015, 18:00:00 -0800
+End: Fri, 6 Feb 2015, 18:30:00 -0800
+Task: Finished loopback.php
+
+Start: Sat, 7 Feb 2015, 20:00:00 -0800
+End: Sat, 7 Feb 2015, 21:00:00 -0800
+Tasks: Started login.php, content1.php
+
+Start: Sat, 7 Feb 2015, 00:00:00 -0800
+End: Sat, 7 Feb 2015, 01:00:00 -0800
+Tasks: Worked on content1.php
+
+Start: Sat, 7 Feb 2015, 21:00:00 -0800
+End: Sun, 8 Feb 2015, 00:00:00 -0800
+Tasks: Completed content1.php
+
+Start: Sun, 8 Feb 2015, 12:00:00 -0800
+End: Sun, 8 Feb 2015, 15:00:00 -0800
+Tasks: Update loopback.php to return type 'application/json' and not html.  Fixed content1.php
+and content2.php redirects using javascript window.location
+instead of php header("Location:...").
+Added border property to table in multtable.php.
+Submitted assignment.

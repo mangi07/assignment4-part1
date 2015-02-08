@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="description" content="CS 290 Assignment 4">
+	<meta name="author" content="Benjamin R. Olson">
+	<title>CS 290 Assignment 4 Part 1: loopback_test.php</title>
+  </head>
+  <body>
+  
+    <h1>loopback_test.php</h1>
+	
+	<p>Submit with method GET</p>
+	<form action="loopback.php" method="GET">
+	  age: <input type="number" name="age"/><br />
+	  phone: <input type="text" name="phone"/><br />
+	  addy: <input type="text" name="addy"/><br />
+	  flavor: <input type="text" name="flavor"/><br />
+	  <input type="submit" name="submit">
+	</form>
+	
+	<p>Submit with method POST</p>
+	<form action="loopback.php" method="POST">
+	  make: <input type="text" name="make"/><br />
+	  model: <input type="text" name="model"/><br />
+	  quantity: <input type="number" name="quantity"/><br />
+	  <input type="submit" name="submit">
+	</form>
+	
+  </body>
+</html>
